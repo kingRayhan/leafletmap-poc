@@ -7,15 +7,16 @@ import type { SavedShapesCollection } from "./drawing-types";
 import { handleError, layerToGeoJSON, MapError } from "./leaflet-draw-utils";
 import type { GeoCodeResult, GeoSearchResultIten } from "./types";
 
-// delete (Leaflet.Icon.Default.prototype as any)._getIconUrl;
-// Leaflet.Icon.Default.mergeOptions({
-//   iconRetinaUrl:
-//     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
-//   iconUrl:
-//     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
-//   shadowUrl:
-//     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-// });
+// delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
+});
 
 const Map = () => {
   const mapDomRef = useRef<HTMLDivElement>(null);
