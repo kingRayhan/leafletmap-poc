@@ -31,7 +31,7 @@ const Map = () => {
         dragging: true,
       }).setView([23.88163474558195, 90.38529952494262], 18);
 
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      L.tileLayer("https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
         maxZoom: 19,
       }).addTo(mapRef.current);
 
